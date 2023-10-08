@@ -14,3 +14,4 @@ https://scmx.github.io/bingo/?s=Ruby&s=C%23&s=C&s=PHP&s=Assembly&s=Lua&s=SQL&s=R
 - Dark mode
 - Tried some [CSS container query length units](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_container_queries)
 - Inline unit tests with console.assert
+- Blazingly fast
