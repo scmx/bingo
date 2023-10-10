@@ -44,7 +44,7 @@
         <blockquote><p data-bingo-quote></p></blockquote>
         <ul data-bingo-choices></ul>
       </details>
-      <details class="editor">
+      <details class="editor" data-bingo-editor>
         <summary>Change items</summary>
         <form data-bingo-items-form>
           <input type="text" name="item" />
@@ -75,7 +75,10 @@
         </form>
         <footer class="editor-footer">
           <small>✅ Automatically saved to URL</small>
-          <button type="button" data-bingo-shuffle-button>Shuffle order</button>
+          <button type="button" data-bingo-shuffle-button>
+            🔀 Shuffle order
+          </button>
+          <button type="button" data-bingo-lock-button>🔏 Lock items</button>
         </footer>
       </details>
     </aside>
