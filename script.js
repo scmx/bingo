@@ -37,10 +37,18 @@ grid.onpointerleave = (event) => {
 
 const quote = document.querySelector("p[data-bingo-quote]");
 const choicesList = document.querySelector("ul[data-bingo-choices]");
+const editor = document.querySelector("details[data-bingo-editor]");
 
 const random = document.querySelector("button[data-bingo-random-button]");
 random.onclick = () => {
   randomChoice();
+};
+
+const lock = document.querySelector("button[data-bingo-lock-button]");
+lock.onclick = () => {
+  editor.remove();
+  url.searchParams.set("lock", "");
+  history.replaceState(null, "", url.href);
 };
 
 const form = document.querySelector("form[data-bingo-items-form]");
@@ -70,6 +78,8 @@ inputs.forEach((_, i) => {
 });
 
 randomChoice();
+
+if (url.searchParams.has("lock")) editor.remove();
 
 function randomChoice() {
   const x1 = Math.floor(Math.random() * 5);
